@@ -1,0 +1,13 @@
+{
+  "language": "language",
+  "username": "Username",
+  "password": "Password",
+  "login": "Login",
+  "register": "Register",
+  "reset_hwid": "Reset HWID",
+  "forget_pwd": "forget password",
+  "register_tab": "Register",
+  "login_tab": "Login",
+  "en": "English",
+  "zh": "简体中文"
+}

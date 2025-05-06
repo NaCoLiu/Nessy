@@ -1,0 +1,13 @@
+{
+  "language": "语言",
+  "username": "用户名",
+  "password": "密码",
+  "login": "登录",
+  "register": "注册",
+  "reset_hwid": "重置硬件ID",
+  "forget_pwd": "忘记密码",
+  "register_tab": "注册",
+  "login_tab": "登录",
+  "en": "English",
+  "zh": "简体中文"
+}
