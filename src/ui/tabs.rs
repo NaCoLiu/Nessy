@@ -19,8 +19,8 @@ pub struct TabState {
 impl Default for TabState {
     fn default() -> Self {
         Self {
-            username: String::new(),
-            password: String::new(),
+            username: "NaCo".to_string(),
+            password: "NaCo".to_string(),
             current_tab: Tab::Login,
             locale: "en".to_string()
         }

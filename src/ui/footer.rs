@@ -19,7 +19,7 @@ pub fn render_footer(ui: &mut egui::Ui) {
             ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                 ui.hyperlink_to(
                     format!("{} {}", egui_material_icons::icons::ICON_UPDATE, t!("Update")),
-                    "https://github.com/yourusername/yourproject",
+                    "https://dma.social/",
                 );
             });
         });
