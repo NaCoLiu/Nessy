@@ -4,9 +4,10 @@ use std::env;
 
 pub fn render_footer(ui: &mut egui::Ui) {
     ui.add_space(5.0);
+   
+
     ui.with_layout(egui::Layout::bottom_up(egui::Align::Center), |ui| {
         ui.add_space(2.0);
-
         ui.horizontal(|ui| {
             ui.spacing_mut().item_spacing.x = 5.0;
             ui.label("© 2025");
@@ -23,5 +24,6 @@ pub fn render_footer(ui: &mut egui::Ui) {
                 );
             });
         });
+        ui.separator();
     });
 }
