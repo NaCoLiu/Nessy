@@ -1,15 +1,17 @@
 use eframe::egui;
-
 use std::{env, sync::Arc};
 
 mod ui;
 use ui::tabs::TabState;
 mod pages;
+mod config;
 
 rust_i18n::i18n!("locales");
 
 fn main() -> eframe::Result<()> {
-    rust_i18n::set_locale("en");
+    // 使用配置中的语言设置初始化
+    let language = config::get_language();
+    rust_i18n::set_locale(&language);
 
     let app_name = env!("CARGO_PKG_NAME");
     let mut options = eframe::NativeOptions::default();
@@ -48,9 +50,7 @@ impl eframe::App for Welcome {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.add_space(5.0);
-
             ui::tabs::render_tabs(ui, &mut self.tab_state);
-
             ui::footer::render_footer(ui);
         });
     }

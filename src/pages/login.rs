@@ -1,6 +1,6 @@
 use eframe::egui;
 use rust_i18n::t;
-use crate::ui::tabs::TabState;
+use crate::{config::set_credentials, ui::tabs::TabState};
 
 pub fn render_login_tab(ui: &mut egui::Ui, state: &mut TabState) {
     ui.label(format!("{} {}", egui_material_icons::icons::ICON_PEOPLE_ALT, t!("username")));
@@ -32,8 +32,10 @@ pub fn render_login_tab(ui: &mut egui::Ui, state: &mut TabState) {
     ui.add_space(20.0);
     ui.horizontal(|ui| {
         if ui.button(t!("login")).clicked() {
+            let _ = set_credentials(&state.username, &state.password);
         }
         if ui.button(t!("reset_hwid")).clicked() {
+            
         }
         if ui.button(t!("forget_pwd")).clicked() {
         }
