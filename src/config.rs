@@ -8,7 +8,7 @@ use once_cell::sync::Lazy;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Config {
-    pub username: String,
+    pub email: String,
     pub password: String,
     pub language: String,
 }
@@ -16,7 +16,7 @@ pub struct Config {
 impl Default for Config {
     fn default() -> Self {
         Self {
-            username: String::new(),
+            email: String::new(),
             password: String::new(),
             language: "en".to_string(),
         }
@@ -102,9 +102,9 @@ pub fn set_language(lang: &str) -> Result<(), Box<dyn Error>> {
     })
 }
 
-// 获取用户名
-pub fn get_username() -> String {
-    get().username
+// 获取邮箱
+pub fn get_email() -> String {
+    get().email
 }
 
 // 获取密码
@@ -113,9 +113,9 @@ pub fn get_password() -> String {
 }
 
 // 设置用户凭据
-pub fn set_credentials(username: &str, password: &str) -> Result<(), Box<dyn Error>> {
+pub fn set_credentials(email: &str, password: &str) -> Result<(), Box<dyn Error>> {
     update(|config| {
-        config.username = username.to_string();
+        config.email = email.to_string();
         config.password = password.to_string();
     })
 }

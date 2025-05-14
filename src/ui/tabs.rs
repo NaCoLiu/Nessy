@@ -12,7 +12,7 @@ pub enum Tab {
 }
 
 pub struct TabState {
-    pub username: String,
+    pub email: String,
     pub password: String,
     pub current_tab: Tab,
     pub locale: String,
@@ -29,7 +29,7 @@ impl Default for TabState {
         };
         
         Self {
-            username: config::get_username(),
+            email: config::get_email(),
             password: config::get_password(),
             current_tab: Tab::Login,
             locale,

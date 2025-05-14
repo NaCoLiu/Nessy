@@ -15,7 +15,7 @@ fn main() -> eframe::Result<()> {
 
     let app_name = env!("CARGO_PKG_NAME");
     let mut options = eframe::NativeOptions::default();
-    let icon_data = eframe::icon_data::from_png_bytes(include_bytes!("../assets/logo.ico"))
+    let icon_data = eframe::icon_data::from_png_bytes(include_bytes!("../assets/logo.png"))
         .expect("The icon data must be valid");
     options.viewport = egui::ViewportBuilder::default()
         .with_inner_size([300.0, 260.0])

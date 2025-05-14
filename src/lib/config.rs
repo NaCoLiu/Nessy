@@ -6,7 +6,7 @@ use std::path::{Path, PathBuf};
 /// 配置结构体
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Config {
-    pub username: String,
+    pub email: String,
     pub password: String,
     pub language: String,
 }
@@ -14,7 +14,7 @@ pub struct Config {
 impl Default for Config {
     fn default() -> Self {
         Self {
-            username: String::new(),
+            email: String::new(),
             password: String::new(),
             language: "zh".to_string(),
         }

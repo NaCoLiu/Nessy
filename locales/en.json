@@ -1,6 +1,6 @@
 {
   "language": "language",
-  "username": "Username",
+  "email": "email",
   "password": "Password",
   "login": "Login",
   "register": "Register",
